@@ -1,7 +1,7 @@
 package com.it.study.tokyo.tian.veg;
 
 /**
- * @author ts-wen.tian
+ * @author tian
  */
 public class Vegetables {
     /**
