@@ -7,4 +7,5 @@ package com.it.study.tokyo.tian.itf;
  */
 public interface Eatable {
     void canEat();
+
 }
