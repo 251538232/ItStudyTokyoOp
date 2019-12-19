@@ -25,6 +25,10 @@ public class SongMainTest {
             BufferedReader br =
                     new BufferedReader(new InputStreamReader(System.in));
             System.out.println("do you have tomato? please input Y/N");
+            /**
+             * 将br对象赋值给String变量。。。类型都不一样，如何赋值？
+             * br.readLine()
+             */
             String a = br;
             /**
              * if语句错误
