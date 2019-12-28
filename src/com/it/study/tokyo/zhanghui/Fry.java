@@ -7,13 +7,9 @@ public class Fry {
     int count;
 
     public void fryEgg() {
-
         System.out.println("fry egg");
-
     }
     public void fryTomato() {
-
         System.out.println("fry tomato");
-
     }
 }
