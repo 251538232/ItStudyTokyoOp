@@ -28,4 +28,11 @@ public class Egg implements Eatable {
         System.out.print("egg can eat");
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
