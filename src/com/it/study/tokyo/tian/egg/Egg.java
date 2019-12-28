@@ -15,6 +15,33 @@ public class Egg implements Eatable {
         this.name = name;
     }
 
+    public static void main(String[] args) throws Throwable {
+        Egg egg = new Egg("123");
+        test(egg);
+        System.out.println(egg.getName());
+        if (egg.getName().equals("12333333")) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+
+        int i = testEgg(4);
+        if (5 == i) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+
+    }
+
+    protected static int testEgg(int result) throws Throwable {
+        return ++result;
+    }
+
+    protected static void test(Egg egg) throws Throwable {
+        egg.setName("12333333");
+    }
+
     @Override
     public String toString() {
         return "Egg{" +
