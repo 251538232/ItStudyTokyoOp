@@ -14,7 +14,7 @@ public class Test1228 {
 
     /**
      * 1.算数运算符的使用
-     * 2.讲一点【算法】 算法 - 数据结构 = 程序
+     * 2.讲一点【算法】 算法 + 数据结构 = 程序
      * @param as
      */
     public static void main(String[] as) {
@@ -24,6 +24,8 @@ public class Test1228 {
 
         float af = 1.0f;
         float bf = 2.0f;
+
+        System.out.println(af / b);
 
 //        // 输出结果：-1
 //        a=0;
@@ -52,11 +54,11 @@ public class Test1228 {
 //        // 输出结果  1:hui  1:qiang
 //        System.out.println(a);
 
-        a=1;
-        a += a++ + ++a + a++;
-        // 输出结果  8:hui  8:qiang
-        // 说结果!!!!!!!!!!!!!!!
-        // congratulations~
-        System.out.println(a);
+//        a=1;
+//        a += a++ + ++a + a++;
+//        // result = 1 + 1 + 3 + 3
+//        // 说结果!!!!!!!!!!!!!!!
+//        // congratulations~
+//        System.out.println(a);
     }
 }
