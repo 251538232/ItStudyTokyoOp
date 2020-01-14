@@ -1,7 +1,5 @@
 package com.it.study.tokyo.tian.y2020.d0111;
 
-import com.it.study.tokyo.tian.y2019.d12.veg.DateUtils;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -42,9 +40,9 @@ public class TectDate {
 
         // 2017-01-31 - 2020-04-20
         // 1970-01-01
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-DD");
-        Date s = DateUtils.parse("2017-01-31 00:00:00","YYYY-MM-DD 00:00:00");
-        Date e = DateUtils.parse("2020-04-20 00:00:00","YYYY-MM-DD 00:00:00");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date s = DateUtils.parse("2017-01-31 00:00:00","yyyy-MM-dd 00:00:00");
+        Date e = DateUtils.parse("2020-04-20 00:00:00","yyyy-MM-dd 00:00:00");
         System.out.println(s);
         System.out.println(e);
         s.setTime(e.getTime());
