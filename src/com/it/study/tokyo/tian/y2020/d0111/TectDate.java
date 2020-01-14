@@ -49,11 +49,13 @@ public class TectDate {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date s = DateUtils.parse("2017-01-31 00:00:00","yyyy-MM-dd 00:00:00");
         Date e = DateUtils.parse("2020-04-20 00:00:00","yyyy-MM-dd 00:00:00");
-        System.out.println(s);
+        System.out.println(daysBetween(s, e));
+
+        // 设置毫秒数使之成为新的日期时间
         System.out.println(e);
         s.setTime(e.getTime());
         System.out.println(s);
-//        System.out.println(daysBetween(s, e));
+
     }
 
 
