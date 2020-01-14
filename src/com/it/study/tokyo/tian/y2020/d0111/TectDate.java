@@ -35,9 +35,15 @@ public class TectDate {
         } catch (Exception e) {
         }
         Date end = new Date();
-        boolean isAfter = start.before(end);
-        System.out.println(isAfter);
+        // 日期比较函数 before after
+        boolean isAfter = start.after(end);
+        boolean isbefore = start.before(end);
 
+        // 日期格式化
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+        System.out.println(sdf.format(new Date()));
+
+        // 计算两个日期间隔天数
         // 2017-01-31 - 2020-04-20
         // 1970-01-01
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
