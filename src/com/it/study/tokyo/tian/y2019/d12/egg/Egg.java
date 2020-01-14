@@ -1,6 +1,6 @@
-package com.it.study.tokyo.tian.egg;
+package com.it.study.tokyo.tian.y2019.d12.egg;
 
-import com.it.study.tokyo.tian.itf.Eatable;
+import com.it.study.tokyo.tian.y2019.d12.itf.Eatable;
 
 /**
  * Egg class

@@ -1,7 +1,6 @@
-package com.it.study.tokyo.tian;
+package com.it.study.tokyo.tian.y2020.d0111;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 // 人名排序
 public class TestArea {

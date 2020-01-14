@@ -1,4 +1,4 @@
-package com.it.study.tokyo.tian;
+package com.it.study.tokyo.tian.y2019.d12;
 
 public class Const {
     // 常量 static 可见性

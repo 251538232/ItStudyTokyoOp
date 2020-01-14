@@ -1,4 +1,4 @@
-package com.it.study.tokyo.tian;
+package com.it.study.tokyo.tian.y2019.d1228;
 
 /**
  * 算法

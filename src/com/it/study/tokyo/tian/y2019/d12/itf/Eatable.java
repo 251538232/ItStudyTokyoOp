@@ -1,4 +1,4 @@
-package com.it.study.tokyo.tian.itf;
+package com.it.study.tokyo.tian.y2019.d12.itf;
 
 /**
  * Eatable interface

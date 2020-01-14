@@ -1,6 +1,6 @@
-package com.it.study.tokyo.tian;
+package com.it.study.tokyo.tian.y2019.d1228;
 
-public class TianMainTest {
+public class TestIf {
 
 
     public static void main(String[] args) {
@@ -17,9 +17,9 @@ public class TianMainTest {
 
     }
 
-    public  TianMainTest testMainTst(Integer i){
+    public TestIf testMainTst(Integer i){
         test1(i);
-        return new TianMainTest();
+        return new TestIf();
     }
 
 

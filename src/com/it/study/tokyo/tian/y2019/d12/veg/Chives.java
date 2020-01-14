@@ -1,6 +1,4 @@
-package com.it.study.tokyo.tian.veg;
-import com.it.study.tokyo.tian.Const;
-
+package com.it.study.tokyo.tian.y2019.d12.veg;
 
 
 public class Chives extends Vegetables {

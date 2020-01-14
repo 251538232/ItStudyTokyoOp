@@ -1,14 +1,15 @@
-package com.it.study.tokyo.tian.veg;
+package com.it.study.tokyo.tian.y2019.d12;
 
 
-import com.it.study.tokyo.tian.egg.Egg;
+import com.it.study.tokyo.tian.y2019.d12.egg.Egg;
+import com.it.study.tokyo.tian.y2019.d12.veg.Vegetables;
 
 /**
  * Cooking class
  *
  * @author tian
  */
-public class Cooking1 {
+public class Cooking {
 
     /**
      * cook food with vegetables and egg
