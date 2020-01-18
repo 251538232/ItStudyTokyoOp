@@ -1,6 +1,7 @@
 package com.it.study.tokyo.tian.y2020.d0111;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 // 人名排序
 public class TestArea {
@@ -55,85 +56,112 @@ public class TestArea {
     public static void main(String[] args) {
         // dummy data
         // 初始化
-        ArrayList<Area> areas = new ArrayList<Area>() {
+        ArrayList<PinyinName> areas = new ArrayList<PinyinName>() {
             {
-                add(new Area("andaoer", "安道尔"));
-                add(new Area("yilang", "伊朗"));
-                add(new Area("ruidian", "瑞典"));
-                add(new Area("aodaliya", "澳大利亚"));
-                add(new Area("riben", "日本"));
-                add(new Area("yilake", "伊拉克"));
-                add(new Area("aerjiliya", "阿尔及利亚"));
+//                add(new PinyinName("zhh", "zhh"));
+//                add(new PinyinName("swq", "swq"));
+//                add(new PinyinName("wx", "wx"));
+                add(new PinyinName("aodaliya", "澳大利亚"));
+                add(new PinyinName("riben", "日本"));
+                add(new PinyinName("yilake", "伊拉克"));
+                add(new PinyinName("aerjiliya", "阿尔及利亚"));
+                add(new PinyinName("andaoer", "安道尔"));
+                add(new PinyinName("yilang", "伊朗"));
+                add(new PinyinName("ruidian", "瑞典"));
+                add(new PinyinName("aodaliya", "澳大利亚"));
+                add(new PinyinName("riben", "日本"));
+                add(new PinyinName("yilake", "伊拉克"));
+                add(new PinyinName("aerjiliya", "阿尔及利亚"));
             }
         };
 
         // 临界值
         // 异常值：null "" list 0 int
         // 预期值
-        testArea(areas);
+        testAreaTwo(areas);
 
     }
-
-    /**
-     * 通过拼音查找Area对象
-     *
-     * @param paramPinyin 输入拼音参数
-     * @param areaList    地区列表
-     * @return 对应的地区列表，找不到的情况下返回null
-     */
-    private static Area getByPinyin(String paramPinyin, List<Area> areaList) {
-        for (int i = 0; i < areaList.size(); i++) {
-            if (areaList.get(i).getPinyin().equals(paramPinyin)) {
-                return areaList.get(i);
-            }
-        }
-        return null;
-    }
+//
+//    /**
+//     * 通过拼音查找Area对象
+//     *
+//     * @param paramPinyin 输入拼音参数
+//     * @param areaList    地区列表
+//     * @return 对应的地区列表，找不到的情况下返回null
+//     */
+//    private static PinyinName getByPinyin(String paramPinyin, List<PinyinName> areaList) {
+//        for (int i = 0; i < areaList.size(); i++) {
+//            if (areaList.get(i).getPinyin().equals(paramPinyin)) {
+//                return areaList.get(i);
+//            }
+//        }
+//        return null;
+//    }
 
 
     /**
      * 输入一个拼音和名称的组合，然后输出排序并分好组的结果
+     *
      * @param areas
      */
-    private static void testArea(ArrayList<Area> areas){
+    private static void testAreaTwo(ArrayList<PinyinName> areas) {
 
-        /**
-         *
-         * alt+shift+R
-         *对获取的结果集进行排序
-         */
-        List<String> pinyins = new ArrayList<>();
-        for (int i = 0; i < areas.size(); i++) {
-            pinyins.add(areas.get(i).getPinyin());
-        }
-        // 1. 排序
-        Collections.sort(pinyins);
-
-        // 2.分组
-        // 分组的逻辑 首字母进行分组
-        // key : 首字母 , value 首字母为a的排好序的area列表
-        Map<String, List<Area>> result = new HashMap<>();
-        for (int i = 0; i < pinyins.size(); i++) {
-            // now py
-            String py = pinyins.get(i);
-            // get pinyin first al
-            String firstA = py.substring(0, 1);
-            // map不包含firsta
-            if (!result.containsKey(firstA)) {
-                List<Area> areaList = new ArrayList<>();
-                areaList.add(getByPinyin(py, areas));
-                result.put(firstA, areaList);
-            } else {
-                // 获取既有的国家列表列表
-                List<Area> areaList = result.get(firstA);
-                areaList.add(getByPinyin(py, areas));
-            }
-        }
-
-        for (Map.Entry<String, List<Area>> entry : result.entrySet()) {
+        // 重构
+        List<PinyinName> collect1 = areas.stream().sorted((o1, o2) -> {
+            return o1.getPinyin().compareTo(o2.getPinyin());
+        }).collect(Collectors.toList());
+        Map<String, List<PinyinName>> collect = collect1.stream().collect(Collectors.groupingBy(pinyinName -> pinyinName.getPinyin().substring(0, 1)));
+        for (Map.Entry<String, List<PinyinName>> entry : collect.entrySet()) {
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
             System.out.println("================================================================");
         }
     }
+//
+//    /**
+//     * 输入一个拼音和名称的组合，然后输出排序并分好组的结果
+//     *
+//     * @param areas
+//     */
+//    private static void testPy(ArrayList<PinyinName> areas) {
+//
+//        /**
+//         *
+//         * alt+shift+R
+//         *对获取的结果集进行排序
+//         */
+//        List<String> pinyins = new ArrayList<>();
+//        for (int i = 0; i < areas.size(); i++) {
+//            pinyins.add(areas.get(i).getPinyin());
+//        }
+//        // 1. 排序
+//        Collections.sort(pinyins);
+//
+//        // 2.分组
+//        // 分组的逻辑 首字母进行分组
+//        // key : 首字母 , value 首字母为a的排好序的area列表
+//        Map<String, List<PinyinName>> result = new HashMap<>();
+//        for (int i = 0; i < pinyins.size(); i++) {
+//            // now py
+//            String py = pinyins.get(i);
+//            // get pinyin first al
+//            String firstA = py.substring(0, 1);
+//            // map不包含firsta
+//            if (!result.containsKey(firstA)) {
+//                List<PinyinName> areaList = new ArrayList<>();
+//                areaList.add(getByPinyin(py, areas));
+//                result.put(firstA, areaList);
+//            } else {
+//                // 获取既有的国家列表列表
+//                List<PinyinName> areaList = result.get(firstA);
+//                areaList.add(getByPinyin(py, areas));
+//            }
+//        }
+//
+//        for (Map.Entry<String, List<PinyinName>> entry : result.entrySet()) {
+//            System.out.println(entry.getKey());
+//            System.out.println(entry.getValue());
+//            System.out.println("================================================================");
+//        }
+//    }
 }

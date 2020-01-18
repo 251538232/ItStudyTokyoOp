@@ -14,5 +14,5 @@ public class AreaResult {
     /**
      * 地区列表
      */
-    private List<Area> areaList;
+    private List<PinyinName> areaList;
 }

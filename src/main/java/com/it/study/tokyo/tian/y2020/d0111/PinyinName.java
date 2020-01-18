@@ -5,7 +5,7 @@ package com.it.study.tokyo.tian.y2020.d0111;
  * @author tian
  * @date 2020/1/11
  */
-public class Area {
+public class PinyinName {
 
     /**
      * 地区汉语拼音
@@ -16,7 +16,7 @@ public class Area {
      */
     private String name;
 
-    public Area(String pinyin, String name) {
+    public PinyinName(String pinyin, String name) {
         this.pinyin = pinyin;
         this.name = name;
     }
@@ -39,9 +39,8 @@ public class Area {
 
     @Override
     public String toString() {
-        return "Area{" +
+        return "" +
                 "pinyin='" + pinyin + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+                ", name='" + name + '\'';
     }
 }
