@@ -2,7 +2,7 @@ package com.it.study.tokyo.tian.y2020.d0118;
 
 public class TestHeart {
     public static void main(String[] args) {
-        int n = 5;
+        int n = 10;
         for (int i = -3 * n / 2; i <= n; i++) {
             for (int j = -3 * n / 2; j <= 3 * n / 2; j++) {
 
