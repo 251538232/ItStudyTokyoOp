@@ -14,6 +14,7 @@ public class DateUtils {
    */
   public final static String YYYY_MM_DD = "yyyy-MM-dd";
 
+
   /**
    * 時間フォーマット(yyyy-MM-dd HH:mm:ss)
    */
