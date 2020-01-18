@@ -67,6 +67,36 @@ public class TestArea {
             }
         };
 
+        // 临界值
+        // 异常值：null "" list 0 int
+        // 预期值
+        testArea(areas);
+
+    }
+
+    /**
+     * 通过拼音查找Area对象
+     *
+     * @param paramPinyin 输入拼音参数
+     * @param areaList    地区列表
+     * @return 对应的地区列表，找不到的情况下返回null
+     */
+    private static Area getByPinyin(String paramPinyin, List<Area> areaList) {
+        for (int i = 0; i < areaList.size(); i++) {
+            if (areaList.get(i).getPinyin().equals(paramPinyin)) {
+                return areaList.get(i);
+            }
+        }
+        return null;
+    }
+
+
+    /**
+     * 输入一个拼音和名称的组合，然后输出排序并分好组的结果
+     * @param areas
+     */
+    private static void testArea(ArrayList<Area> areas){
+
         /**
          *
          * alt+shift+R
@@ -105,21 +135,5 @@ public class TestArea {
             System.out.println(entry.getValue());
             System.out.println("================================================================");
         }
-    }
-
-    /**
-     * 通过拼音查找Area对象
-     *
-     * @param paramPinyin 输入拼音参数
-     * @param areaList    地区列表
-     * @return 对应的地区列表，找不到的情况下返回null
-     */
-    private static Area getByPinyin(String paramPinyin, List<Area> areaList) {
-        for (int i = 0; i < areaList.size(); i++) {
-            if (areaList.get(i).getPinyin().equals(paramPinyin)) {
-                return areaList.get(i);
-            }
-        }
-        return null;
     }
 }
