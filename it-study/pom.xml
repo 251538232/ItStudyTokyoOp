@@ -6,7 +6,7 @@
 
     <groupId>com.it</groupId>
     <version>1.0.0</version>
-    <artifactId>it-tokyo</artifactId>
+    <artifactId>it-study</artifactId>
     <packaging>jar</packaging>
 
     <parent>

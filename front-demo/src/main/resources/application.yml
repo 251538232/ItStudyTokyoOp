@@ -1,0 +1,16 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8088
+
+spring:
+  #  dev|test|pro
+  profiles:
+    active: dev
+  messages:
+    encoding: UTF-8
+#logging:
+#  config: file:${properties.path}/logback.xml

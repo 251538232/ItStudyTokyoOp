@@ -1,9 +1,13 @@
 package com.it.controller;
 
+import com.it.service.TestService;
+import com.it.utils.HttpUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,6 +27,8 @@ import java.sql.ResultSet;
 @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 @Api(value = "user")
 public class LoginController {
+    @Autowired
+    TestService testService;
 
     /**
      * ユーザー名とパスワードで認証登録
@@ -36,7 +42,7 @@ public class LoginController {
     @ApiOperation(value = "ユーザーログイン処理", httpMethod = "POST")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Object login(@ApiParam(value = "ユーザー名") String username,
-                        @ApiParam(value = "パスワード") String password) throws Exception {
+            @ApiParam(value = "パスワード") String password) throws Exception {
         boolean result = testLogin(username, password);
         if (result) {
             return "login ok";
@@ -80,5 +86,22 @@ public class LoginController {
 
         return "logout";
     }
+
+    /**
+     * ログアウト処理
+     *
+     * @return 処理結果
+     */
+    @ResponseBody
+    @RequestMapping(value = "/test", method = {RequestMethod.GET})
+    public Object test() throws Exception {
+        for (int i = 0; i < 3; i++) {
+            Thread.sleep(10);
+            testService.testSend();
+        }
+        String result = "ok too";
+        return result;
+    }
+
 
 }
