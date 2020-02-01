@@ -1,0 +1,5 @@
+@startuml
+手机 -> 服务器: Authentication Request
+服务器 -> 手机: Authentication Response
+
+@enduml

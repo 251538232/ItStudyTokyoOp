@@ -27,6 +27,15 @@ import java.sql.ResultSet;
 @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 @Api(value = "user")
 public class LoginController {
+
+    // 控制正转
+    // new Xxxx();
+
+    // 控制反转 nonew 直接取 ioc
+    //     @Autowired
+    //    TestService testService;
+    // 面向切面编程 aop
+
     @Autowired
     TestService testService;
 
@@ -56,7 +65,7 @@ public class LoginController {
         Class.forName("org.sqlite.JDBC");
         // 建立连接
         Connection conn = DriverManager.getConnection("jdbc:sqlite:" + "C:\\Users\\qdmission\\IdeaProjects\\ItStudyTokyoOp\\doc\\test.db");
-        // "select * from user" （老王给我打电话） 命令标准  （老王去坐飞机）：对我无效的命令
+        // "select * from user"
         PreparedStatement state = conn.prepareStatement("select * from user");
         //查询数据
         ResultSet rs = state.executeQuery();
@@ -74,6 +83,12 @@ public class LoginController {
         return result;
     }
 
+    /**
+     * M=包装传递
+     * V=显示
+     * C=控制
+     * model  view    controller
+     */
     /**
      * ログアウト処理
      *

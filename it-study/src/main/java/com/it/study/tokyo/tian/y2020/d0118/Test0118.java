@@ -16,6 +16,14 @@ public class Test0118 {
             }
             System.out.println("");
         }
+        System.out.println("--------------------------------------------");
+        // i left j right = xxx
+        for (int i = 9; i > 0 ; i--) {
+            for (int j = 1; j <= i ; j++) {
+                System.out.print(j + "*" + i + "=" + (i*j) +"\t");
+            }
+            System.out.println("");
+        }
 
         String a= "123";
         String b ="abc";
