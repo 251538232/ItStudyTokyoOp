@@ -11,6 +11,13 @@ public class Song {
         char[] chars = text.toCharArray();
         List<Integer> ints = new ArrayList<>();
 
+//        // 2
+//        String numStr2 = String.valueOf(intNum);
+//        System.out.println("numstr2 " + numStr2);
+//        // 3
+//        String numStr3 = Integer.toString(intNum);
+//        System.out.println("numstr3 " + numStr3);
+
         String tmp = "";
         for (char c : chars) {
             if (c != ' ') {
