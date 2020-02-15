@@ -4,6 +4,7 @@ public class Zhang {
 
     public static void main(String[] args) {
         String text = "123,45,6,7";
+        String text1 = "123,45,6,7";
 
 
     }
