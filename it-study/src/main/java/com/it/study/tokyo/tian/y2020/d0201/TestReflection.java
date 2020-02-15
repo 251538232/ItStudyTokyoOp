@@ -11,7 +11,7 @@ public class TestReflection {
     public static void main(String[] args) throws Exception {
         Single single = Single.getInstance();
         single.setName("wenqiang");
-
+//        single.getName();
         // 反射
         Method getNameMethod = single.getClass().getDeclaredMethod("getName");
         getNameMethod.setAccessible(true);

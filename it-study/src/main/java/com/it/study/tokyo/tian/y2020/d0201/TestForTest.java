@@ -20,14 +20,14 @@ public class TestForTest {
 //        }
 //        System.out.println("1111111");
         // init
-//        List<String> strings = new ArrayList<>();
-//        for (int i = 0; i < 10000000; i++) {
-//            strings.add(Integer.toString(i));
-//            if (i == 1) {
-//                break;
-//            }
-//        }
-//        System.out.println(strings);
+        List<String> strings = new ArrayList<>();
+        for (int i = 0; i < 10000000; i++) {
+            strings.add(Integer.toString(i));
+            if (i == 1) {
+                break;
+            }
+        }
+        System.out.println(strings);
 
         // 监听 listener
 //        boolean result = true;
