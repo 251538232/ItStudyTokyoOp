@@ -20,19 +20,9 @@ public class TestList {
         // 把list 分割为多个list 每个分割后的list最大3个元素
         // list里面有多少个元素
         // 0-2 3-5 6-7
-//        循环
-//        int splitSize = 3;
-//        int groupCount = strings.size() % splitSize == 0 ? strings.size() / splitSize : strings.size() / splitSize + 1;
-//
-//
-//        for (int i = 0; i < strings.size(); i++) {
-//            List<String> tmpList = new ArrayList<>();
-//            tmpList.add(strings.get(i));
-//            lists.add(tmpList);
-//        }
 
-//        splitList(strings, 3);
-//        splitList1(strings, 3);
+        splitList(strings, 3);
+        splitList1(strings, 3);
         splitList2(strings, 3);
     }
 

@@ -1,24 +1,8 @@
 package com.it.study.tokyo.tian.y2020.d0222;
 
 public class BackPack {
-    // 23kg箱子
-
-    // A = {6kg,400元}
-    // B = {10kg,200元}
-    // C = {17kg,400元}
-    // D = {4kg,300元}
 
     public static void main(String[] args) {
-        int[][] parts = new int[][]{{6, 400}
-                , {10, 200}
-                , {17, 400}, {4, 300}};
-
-
-
-    }
-
-
-    public static void main1(String[] args) {
         int m = 10;
         int n = 3;
         int w[] = {3, 4, 5};
