@@ -24,4 +24,7 @@ public class Main {
         // 取得した値を標準出力するために"XXXXXX"をどう書き換える？
         System.out.println(smallHeight * di);
     }
+
+
+
 }
