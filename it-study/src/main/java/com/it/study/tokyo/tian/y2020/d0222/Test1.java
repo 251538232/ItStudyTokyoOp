@@ -3,33 +3,33 @@ package com.it.study.tokyo.tian.y2020.d0222;
 public class Test1 {
     public static void main(String[] args) {
         int a = 1;
-        int b = 2;
+        int b = 6;
 
-        int c1 = a;
-        int c2 = b;
-        a=c2;
-        b=c1;
-
-        a=b;
-        b=c1;
-
-
-        int i = a;
+        int tmp = a;
         a = b;
-        b = i;
+        b = tmp;
+
 
         // -128 --- 127
         Integer c = 127;
         Integer d = 127;
+        // 对象相等 值相当 true
         System.out.println(c == d);
 
+        // 值相当 true
+        System.out.println(c.equals(d));
+
+        int e1 = 128;
+        int f1 = 128;
+        System.out.println("e1 == f1 " + (e1 == f1));
+
+//        -128 and 127
         Integer e = 128;
         Integer f = 128;
+        // true int -2^31~~2^31-1
+        System.out.println(e == f);
+        // true
         System.out.println(e.equals(f));
-//        c = {Integer@540} 127
-//        d = {Integer@540} 127
-//        e = {Integer@541} 128
-//        f = {Integer@542} 128
 
     }
 }

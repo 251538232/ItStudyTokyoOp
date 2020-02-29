@@ -9,6 +9,7 @@ public class Test2 {
             add(3);
             add(5);
             add(7);
+            add(8);
             add(2);
             add(2);
         }};

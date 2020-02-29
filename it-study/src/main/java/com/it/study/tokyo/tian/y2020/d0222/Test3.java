@@ -23,28 +23,31 @@ public class Test3 {
         List<Integer> distinctList = lists.stream().distinct().sorted((o1, o2) -> {
             return o1.compareTo(o2);
         }).collect(Collectors.toList());
-        List<Integer> distinctList1 = lists.stream().distinct().sorted((o1, o2) -> {
-            return o2.compareTo(o1);
-        }).collect(Collectors.toList());
-
-        System.out.println(distinctList.get(1));
-        System.out.println(distinctList.get(2));
         System.out.println(distinctList);
-        System.out.println(distinctList1);
+        System.out.println(distinctList.get(4));
 //
-//        // 去重复
-        Set<Integer> intSet = new HashSet<>();
-        intSet.addAll(lists);
-        System.out.println(intSet);
-
-        TreeSet<Integer> integers = new TreeSet<>(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1.compareTo(o2);
-            }
-        });
-        integers.addAll(lists);
-        System.out.println(integers);
+//        List<Integer> distinctList1 = lists.stream().distinct().sorted((o1, o2) -> {
+//            return o2.compareTo(o1);
+//        }).collect(Collectors.toList());
+//
+//        System.out.println(distinctList.get(1));
+//        System.out.println(distinctList.get(2));
+//        System.out.println(distinctList);
+//        System.out.println(distinctList1);
+////
+////        // 去重复
+//        Set<Integer> intSet = new HashSet<>();
+//        intSet.addAll(lists);
+//        System.out.println(intSet);
+//
+//        TreeSet<Integer> integers = new TreeSet<>(new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer o1, Integer o2) {
+//                return o1.compareTo(o2);
+//            }
+//        });
+//        integers.addAll(lists);
+//        System.out.println(integers);
 
         // 有没有样本模板（APK既有式样书）
 
