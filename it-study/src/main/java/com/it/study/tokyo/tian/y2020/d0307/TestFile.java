@@ -25,22 +25,7 @@ public class TestFile {
             writer.append("\r\n");
             writer.append("数据工程师");
             writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
-            writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
-            writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
-            writer.append("数据工程师");
-            writer.append("\r\n");
+
         } catch (Exception e) {
 
         } finally {
