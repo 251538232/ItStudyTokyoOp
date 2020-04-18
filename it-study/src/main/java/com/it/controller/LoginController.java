@@ -30,10 +30,11 @@ public class LoginController {
 
     // 控制正转
     // new Xxxx();
+    // 申请一块儿内存空间
 
     // 控制反转 nonew 直接取 ioc
     //     @Autowired
-    //    TestService testService;
+    //    Xxxx xxxx;
     // 面向切面编程 aop
 
     @Autowired
@@ -51,13 +52,15 @@ public class LoginController {
     @ApiOperation(value = "ユーザーログイン処理", httpMethod = "POST")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Object login(@ApiParam(value = "ユーザー名") String username,
-            @ApiParam(value = "パスワード") String password) throws Exception {
+                        @ApiParam(value = "パスワード") String password) throws Exception {
+        testService.testSend();
         boolean result = testLogin(username, password);
         if (result) {
             return "login ok";
         } else {
             return "login ng";
         }
+        // insert table xxxx
     }
 
     private boolean testLogin(String username, String passwd) throws Exception {
@@ -80,6 +83,7 @@ public class LoginController {
         state.close();
         conn.close();
 
+        // insert table xxxx
         return result;
     }
 
@@ -109,12 +113,22 @@ public class LoginController {
      */
     @ResponseBody
     @RequestMapping(value = "/test", method = {RequestMethod.GET})
-    public Object test() throws Exception {
+    public Object test(String count) throws Exception {
         for (int i = 0; i < 3; i++) {
             Thread.sleep(10);
             testService.testSend();
         }
         String result = "ok too";
+        return result;
+    }
+
+    /**
+     * home work
+     */
+    @ResponseBody
+    @RequestMapping(value = "/songwenqiang", method = {RequestMethod.GET})
+    public Object multi(String count) throws Exception {
+        String result = testService.multi(Integer.parseInt(count));
         return result;
     }
 

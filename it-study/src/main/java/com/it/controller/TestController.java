@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TestController {
 
     @RequestMapping(value = "/")
-    public String login(@ApiParam(value = "ユーザー名") String username, @ApiParam(value = "パスワード") String password) {
+    public String login(@ApiParam(value = "ユーザー名") String username,
+                        @ApiParam(value = "パスワード") String password) {
 
         return "swagger-ui.html";
     }

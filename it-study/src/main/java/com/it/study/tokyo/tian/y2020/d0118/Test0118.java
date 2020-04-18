@@ -14,8 +14,15 @@ public class Test0118 {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j + "*" + i + "=" + (i*j) +"\t");
             }
-            System.out.println("");
+            String c= "123";
+            String d= "123";
+            byte dd = 1;
+            String a = dd +"";
+            System.out.println(Integer.parseInt(c)  *Integer.parseInt(d) );
         }
+
+
+
         System.out.println("--------------------------------------------");
         // i left j right = xxx
         for (int i = 9; i > 0 ; i--) {
