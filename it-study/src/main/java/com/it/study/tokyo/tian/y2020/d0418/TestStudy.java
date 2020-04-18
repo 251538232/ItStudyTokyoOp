@@ -11,6 +11,9 @@ public class TestStudy {
     }
 
     public float getFloat(float f, int i) {
+        if (f < 0.0) {
+            return -1;
+        }
         return f * i;
     }
 
