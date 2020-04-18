@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.net.ConnectException;
+
 import static org.junit.Assert.*;
 
 public class TestServiceTest {
@@ -39,8 +41,12 @@ public class TestServiceTest {
     }
 
     @Test
-    public void testSendTest() throws Exception {
-        String s = testService.testSend();
-        assertEquals("321", s);
+    public void testSendTest() {
+        try {
+            String s = testService.testSend();
+            assertEquals("321", s);
+        } catch (Exception e) {
+            assertTrue(e instanceof ConnectException);
+        }
     }
 }
