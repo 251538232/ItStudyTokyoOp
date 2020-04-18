@@ -22,7 +22,7 @@ public class HttpUtils {
      * @param
      * @return
      */
-    public static String sendGet(String url) {
+    public static String sendGet(String url) throws Exception {
         String result = "";
         BufferedReader in = null;
         try {
@@ -49,8 +49,9 @@ public class HttpUtils {
                 result += line;
             }
         } catch (Exception e) {
-            System.out.println("发送GET请求出现异常！" + e);
-            e.printStackTrace();
+//            System.out.println("发送GET请求出现异常！" + e);
+//            e.printStackTrace();
+            throw e;
         }
         // 使用finally块来关闭输入流    
         finally {
@@ -130,7 +131,7 @@ public class HttpUtils {
      * @param charset 编码方式
      */
     public static String sendPost(String url, Map<String, String> param,
-            String charset) {
+                                  String charset) {
 
         StringBuffer buffer = new StringBuffer();
         if (param != null && !param.isEmpty()) {
