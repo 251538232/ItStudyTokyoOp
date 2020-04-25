@@ -6,16 +6,16 @@ public class JunitStudy {
     private MyBean myBean;
 
     // 题目
-    public void setTestMyBean(MyBean bean){
+    public void setTestMyBean(MyBean bean) {
         bean.setLen(2);
         bean.setText("beanName");
-        this.myBean=bean;
+        this.myBean = bean;
     }
 
     // 题目2
-    public void set(int i){
-        if (myBean == null){
-            myBean = new MyBean("te",0);
+    public void set(int i) {
+        if (myBean == null) {
+            myBean = new MyBean("te", 0);
         }
         myBean.setLen(i);
     }
@@ -35,7 +35,6 @@ public class JunitStudy {
     public void setMyBean(MyBean myBean) {
         this.myBean = myBean;
     }
-
 
 
 }
