@@ -12,6 +12,14 @@ public class JunitStudy {
         this.myBean=bean;
     }
 
+    // 题目2
+    public void set(int i){
+        if (myBean == null){
+            myBean = new MyBean("te",0);
+        }
+        myBean.setLen(i);
+    }
+
     public String getName() {
         return name;
     }
