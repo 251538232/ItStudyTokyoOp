@@ -11,6 +11,9 @@ public class Egg implements Eatable {
 
     private String name;
 
+    public Egg() {
+    }
+
     public Egg(String name) {
         this.name = name;
     }
