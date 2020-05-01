@@ -18,16 +18,16 @@ public class JstudyTestHui {
     public void testGetMulti() {
         Jstudy jstudy = new Jstudy();
         float f = jstudy.getMulti(1.0f,3.0f);
-        assertEquals(6.0,f);
+        assertEquals(6,(int)f);    // why f is int?
 
     }
 
     @Test
     public void setMyBean() {
         Jstudy jstudy = new Jstudy();
-        jstudy.myBean=new MyBean("test",0);
-        assertEquals(0,jstudy.myBean.getLen());
-        assertEquals("test",jstudy.myBean.getText());
+        jstudy.setMyBean() ;
+        assertEquals(0,jstudy.getMyBean().getLen());
+        assertEquals("test",jstudy.getMyBean().getText());
 
     }
 }
