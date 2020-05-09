@@ -1,6 +1,8 @@
 package com.it.study.tokyo.tian.y2020.d0425;
 
 public class MyBean {
+    public MyBean() {
+    }
 
     public MyBean(String text, int len) {
         this.text = text;
@@ -19,6 +21,8 @@ public class MyBean {
     }
 
     public int getLen() {
+        // 1
+        // 2
         return len;
     }
 
