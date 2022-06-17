@@ -38,7 +38,7 @@
         <shiro.version>1.4.0</shiro.version>
         <guava.version>20.0</guava.version>
 
-        <fastjson.version>1.2.62</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <kaptcha.version>0.0.9</kaptcha.version>
         <fluentvalidator.version>1.0.9</fluentvalidator.version>
         <validation.version>1.1.0.Final</validation.version>
